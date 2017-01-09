@@ -1,5 +1,7 @@
 # unidev-eureka-registry
 
+[![Build Status](https://travis-ci.org/universal-development/unidev-eureka-registry.svg?branch=master)](https://travis-ci.org/universal-development/unidev-eureka-registry)
+
 Eureka registry with JMX configurations
 
 Start service
