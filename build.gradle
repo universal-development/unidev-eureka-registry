@@ -32,7 +32,12 @@ springBoot {
     executable = true
 }
 
+repositories {
+	maven { url 'http://maven.restlet.org' }
+}
+
 dependencies {
+	compile 'org.jminix:jminix:1.2.0'
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.cloud:spring-cloud-starter-eureka')
 	compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
