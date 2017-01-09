@@ -36,6 +36,20 @@ JMinix 1.2
 
 Gradle 
 
+## Docker
+
+Build image with:
+
+```
+docker build . -t unidev-eureka-registry
+```
+
+Run container with:
+
+```
+docker run -d  -p 8761:8000  unidev-eureka-registry
+```
+
 License
 =======
  
