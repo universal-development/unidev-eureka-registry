@@ -15,13 +15,26 @@ Service url
 http://localhost:8761/
 ```
 
+JMX page is available on
+```
+http://localhost:8761/jmx/
+```
+
 Note: JAR file is executable, produced after build JAR file can be executed from terminal
+
+![Eureka](docs/eureka.jpg)
+
+![JMX](docs/jmx.jpg)
 
 ## Stack
 
-	Java 8
+Java 8
 
- 	Spring Boot 1.4.x
+Spring Boot 1.4.x
+
+JMinix 1.2
+
+Gradle 
 
 License
 =======
