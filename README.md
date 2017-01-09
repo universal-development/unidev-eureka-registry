@@ -13,6 +13,8 @@ Service url
 http://localhost:8761/
 ```
 
+Note: JAR file is executable, produced after build JAR file can be executed from terminal
+
 ## Stack
 
 	Java 8
