@@ -47,7 +47,7 @@ docker build . -t unidev-eureka-registry
 Run container with:
 
 ```
-docker run -d  -p 8000:8761  unidev-eureka-registry
+docker run -d  -p 8761:8761  unidev-eureka-registry
 ```
 
 License
