@@ -2,6 +2,17 @@
 
 Eureka registry with JMX configurations
 
+Start service
+
+```
+./gradlew bootRun
+```
+
+Service url
+```
+http://localhost:8761/
+```
+
 ## Stack
 
 	Java 8
