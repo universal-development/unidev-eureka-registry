@@ -25,12 +25,9 @@ jar {
 
 sourceCompatibility = 1.8
 
-repositories {
-	mavenCentral()
-}
-
 springBoot {
     executable = true
+	buildInfo()
 }
 
 if (project.hasProperty('Xunidev')) {
