@@ -30,6 +30,10 @@ springBoot {
 	buildInfo()
 }
 
+repositories {
+	maven { url 'http://maven.restlet.org' }
+}
+
 if (project.hasProperty('Xunidev')) {
 	repositories {
 		mavenCentral()
