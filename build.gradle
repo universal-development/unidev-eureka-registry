@@ -32,9 +32,22 @@ springBoot {
     executable = true
 }
 
-repositories {
-	maven { url 'http://maven.restlet.org' }
+if (project.hasProperty('Xunidev')) {
+	repositories {
+		mavenCentral()
+		mavenLocal()
+		jcenter()
+		maven { url 'http://maven.restlet.org' }
+		maven { url 'http://nexus.oss.universal-development.com/releases' }
+		maven { url 'http://nexus.oss.universal-development.com/snapshots' }
+	}
+} else {
+	apply from: 'http://dev.local/gradle/uploadArchivesSftp.groovy'
+	apply from: 'http://dev.local/gradle/defaultRepositories.groovy'
+	apply from: 'http://dev.local/gradle/javadoc.groovy'
 }
+
+
 
 dependencies {
 	compile 'org.jminix:jminix:1.2.0'
