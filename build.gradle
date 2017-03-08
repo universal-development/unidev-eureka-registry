@@ -16,11 +16,11 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
 group = 'com.unidev.eurekaregistry'
-version = '0.0.2-SNAPSHOT'
+version = '0.0.2'
 
 jar {
 	baseName = 'unidev-eureka-registry'
-	version = '0.0.2-SNAPSHOT'
+	version = '0.0.2'
 }
 
 sourceCompatibility = 1.8
