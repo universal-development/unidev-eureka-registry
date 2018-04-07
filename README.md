@@ -30,7 +30,7 @@ Note: JAR file is executable, produced after build JAR file can be executed from
 
 Java 8
 
-Spring Boot 1.4.x
+Spring Boot 2.0.1
 
 JMinix 1.2
 
