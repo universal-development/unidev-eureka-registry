@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '1.5.2.RELEASE'
+		springBootVersion = '2.0.1.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -14,24 +14,27 @@ apply plugin: 'maven'
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
 group = 'com.unidev.eurekaregistry'
-version = '0.0.2'
+version = '0.0.3'
 
 jar {
 	baseName = 'unidev-eureka-registry'
-	version = '0.0.2'
+	version = '0.0.3'
 }
 
 sourceCompatibility = 1.8
 
 springBoot {
-    executable = true
 	buildInfo()
 }
 
 repositories {
 	maven { url 'http://maven.restlet.org' }
+	mavenCentral()
+	maven { url "https://repo.spring.io/snapshot" }
+	maven { url "https://repo.spring.io/milestone" }
 }
 
 if (project.hasProperty('Xunidev')) {
@@ -51,16 +54,21 @@ if (project.hasProperty('Xunidev')) {
 
 
 
+
 dependencies {
 	compile 'org.jminix:jminix:1.2.0'
 	compile('org.springframework.boot:spring-boot-starter-actuator')
-	compile('org.springframework.cloud:spring-cloud-starter-eureka')
-	compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
+	compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+	compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+ext {
+	springCloudVersion = 'Finchley.BUILD-SNAPSHOT'
 }
 
 dependencyManagement {
 	imports {
-		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Camden.SR5"
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
 	}
 }
